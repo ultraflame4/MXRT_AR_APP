@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a9cb5afd9eec84ca27a1135a5c6680, type: 3}
+  m_Name: btnIconSettings
+  m_EditorClassIdentifier: 
+  normal_state:
+    sprite: {fileID: 21300000, guid: fd147be12c07e284587983d868c3fb12, type: 3}
+    tint: {r: 0, g: 0, b: 0, a: 1}
+  active_state:
+    sprite: {fileID: 21300000, guid: 06a8f8e7770c2874c8889c8c25524ed9, type: 3}
+    tint: {r: 0, g: 0, b: 0, a: 1}
+  disabled_state:
+    sprite: {fileID: 21300000, guid: 06a8f8e7770c2874c8889c8c25524ed9, type: 3}
+    tint: {r: 0, g: 0, b: 0, a: 0.5686275}
