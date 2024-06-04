@@ -42,14 +42,18 @@ public class IconButton : ClickBounce, IPointerClickHandler
     {
         if (icon == null) return;
         var state = active ? icon.active_state : icon.normal_state;
-        if (disabled){
+        if (disabled)
+        {
             state = icon.disabled_state;
         }
 
         image.sprite = state.sprite;
         image.color = state.tint;
-        labelTxt.text = label;
-        labelTxt.color = state.tint;
+        if (labelTxt != null)
+        {
+            labelTxt.text = label;
+            labelTxt.color = state.tint;
+        }
 
         if (Application.isPlaying && !disabled)
         {
