@@ -24,6 +24,9 @@ public class TabManager : MonoBehaviour
     public TabData[] tabs;
     public TabData current_tab {get; private set;}
 
+    public delegate void TabChangeRequestedHandler(TabData tab, bool isSameTab);
+    public event TabChangeRequestedHandler TabChanged;
+
     private void Start()
     {
         foreach (var tab in tabs)
@@ -53,6 +56,7 @@ public class TabManager : MonoBehaviour
     void OnTabClicked(IconButton clickedButton)
     {
         if (clickedButton.disabled) return;
+        TabData old_tab = current_tab;
         foreach (var tab in tabs)
         {
             if (tab.HasButton(clickedButton))
@@ -63,5 +67,6 @@ public class TabManager : MonoBehaviour
             }
             tab.SetActive(false);
         }
+        TabChanged?.Invoke(current_tab, old_tab == current_tab);
     }
 }

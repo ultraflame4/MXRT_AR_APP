@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -26,6 +27,15 @@ public class AppController : MonoBehaviour
             Debug.LogWarning($"AppController ({_instance}) already exists! This will cause problems!");
         }
         _instance = this;
+    }
+
+    private void Start() {
+        tabManager.TabChanged += OnTabChangeRequested;
+    }
+
+    private void OnTabChangeRequested(TabManager.TabData tab, bool isSameTab)
+    {
+        searchMenu.Close();
     }
 
     public void Login()
