@@ -16,6 +16,7 @@ public class IconButton : ClickBounce, IPointerClickHandler
     [SerializeField]
     private bool active = false;
     public bool debug_update = false;
+    public bool disabled = false;
 
     /// <summary>
     /// If true, the button will not change its state or play an animation when clicked.
@@ -41,13 +42,16 @@ public class IconButton : ClickBounce, IPointerClickHandler
     {
         if (icon == null) return;
         var state = active ? icon.active_state : icon.normal_state;
+        if (disabled){
+            state = icon.disabled_state;
+        }
 
         image.sprite = state.sprite;
         image.color = state.tint;
         labelTxt.text = label;
         labelTxt.color = state.tint;
 
-        if (Application.isPlaying)
+        if (Application.isPlaying && !disabled)
         {
             StartBounceAnimation();
         }
@@ -59,6 +63,13 @@ public class IconButton : ClickBounce, IPointerClickHandler
         this.active = active;
         UpdateIcon();
     }
+    public void SetDisabled(bool disabled = true, bool force = false)
+    {
+        if (this.disabled == disabled && !force) return;
+        this.disabled = disabled;
+        UpdateIcon();
+    }
+
 
 
     public override void OnPointerClick(PointerEventData eventData)

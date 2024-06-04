@@ -8,6 +8,7 @@ public class TabManager : MonoBehaviour
     {
         public GameObject tabPanel;
         public IconButton activator;
+        public bool requireAuth = false;
 
         public void SetActive(bool active)
         {
@@ -32,14 +33,17 @@ public class TabManager : MonoBehaviour
             button.Clicked += OnTabClicked;
             tab.SetActive(false);
         }
+
         current_tab = tabs[0];
-        tabs[0].SetActive(true);
+        ReloadTabs();
     }
 
     public void ReloadTabs()
     {
         foreach (var tab in tabs)
         {
+            var disabled = tab.requireAuth && AppController.Instance.authState != AppController.LoginState.LOGGED_IN;
+            tab.activator.SetDisabled(disabled);
             tab.SetActive(false);
         }
         current_tab.SetActive(true);
@@ -48,6 +52,7 @@ public class TabManager : MonoBehaviour
 
     void OnTabClicked(IconButton clickedButton)
     {
+        if (clickedButton.disabled) return;
         foreach (var tab in tabs)
         {
             if (tab.HasButton(clickedButton))
