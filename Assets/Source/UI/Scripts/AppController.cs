@@ -14,6 +14,7 @@ public class AppController : MonoBehaviour
     public static AppController Instance => _instance;
 
 
+    public MapMenuController mapMenuController;
     public TabManager tabManager;
     public SearchMenuController searchMenu;
 
@@ -36,6 +37,7 @@ public class AppController : MonoBehaviour
     private void OnTabChangeRequested(TabManager.TabData tab, bool isSameTab)
     {
         searchMenu.Close();
+        CloseMap();
     }
 
     public void Login()
@@ -45,9 +47,21 @@ public class AppController : MonoBehaviour
     }
 
 
+    public void Locate()
+    {
+        OpenMap();
+        searchMenu.HidePartial();
+    }
+
+    public void OpenMap()
+    {
+        mapMenuController.gameObject.SetActive(true);
+    }
     
-    
-    
+    public void CloseMap()
+    {
+        mapMenuController.gameObject.SetActive(false);
+    }
     
     
 }

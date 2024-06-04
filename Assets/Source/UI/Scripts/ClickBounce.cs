@@ -41,6 +41,7 @@ public class ClickBounce : MonoBehaviour, IPointerClickHandler
         {
             StopCoroutine(transitionAnimationCoroutine);
         }
+        if (!gameObject.activeInHierarchy)return;
         StartCoroutine(TransitionAnimation_Coroutine());
     }
 
