@@ -14,6 +14,7 @@ public class AppController : MonoBehaviour
 
 
     public TabManager tabManager;
+    public SearchMenuController searchMenu;
 
     private static AppController _instance;
     
