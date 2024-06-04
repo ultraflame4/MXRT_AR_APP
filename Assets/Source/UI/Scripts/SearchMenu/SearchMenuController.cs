@@ -55,7 +55,6 @@ public class SearchMenuController : MonoBehaviour
 
 
 
-
     public void Open()
     {
         searchMenuState = SearchMenuState.Open;

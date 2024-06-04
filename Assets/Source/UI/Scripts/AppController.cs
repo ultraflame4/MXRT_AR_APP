@@ -13,7 +13,7 @@ public class AppController : MonoBehaviour
     public LoginState authState { get; private set; } = LoginState.GUEST;
     public static AppController Instance => _instance;
 
-
+    public RestaurantDetailsMenuController restaurantDetails;
     public MapMenuController mapMenuController;
     public TabManager tabManager;
     public SearchMenuController searchMenu;
@@ -46,6 +46,11 @@ public class AppController : MonoBehaviour
         tabManager.ReloadTabs();
     }
 
+
+    public void OpenRestaurantDetails()
+    {
+        restaurantDetails.Open();
+    }
 
     public void Locate()
     {
