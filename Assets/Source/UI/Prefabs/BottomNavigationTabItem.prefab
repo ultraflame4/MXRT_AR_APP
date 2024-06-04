@@ -98,7 +98,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
@@ -230,6 +230,7 @@ MonoBehaviour:
   labelTxt: {fileID: 7394183483788891411}
   active: 0
   debug_update: 0
+  override_click_behavior: 0
   animation_secs: 0.2
 --- !u!1 &4127092620189470546
 GameObject:
