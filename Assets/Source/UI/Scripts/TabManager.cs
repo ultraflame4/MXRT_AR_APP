@@ -30,7 +30,10 @@ public class TabManager : MonoBehaviour
             var button = tab.activator;
             button.override_click_behavior = true;
             button.Clicked += OnTabClicked;
+            tab.SetActive(false);
         }
+        current_tab = tabs[0];
+        tabs[0].SetActive(true);
     }
 
 
