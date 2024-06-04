@@ -16,7 +16,7 @@ public class SearchMenuController : MonoBehaviour
     public float partial_y_pos = 0;
     [Range(0, 1)]
     public float hidden_y_pos = 0;
-    [SerializeField]
+    [field: SerializeField]
     public SearchMenuState searchMenuState { get; private set; } = SearchMenuState.Hidden;
     public float transitionSpeed = 10f;
     private Vector3 desiredAnchoredPosition;
