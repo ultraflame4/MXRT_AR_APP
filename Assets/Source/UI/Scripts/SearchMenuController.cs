@@ -9,8 +9,6 @@ public class SearchMenuController : MonoBehaviour
         Close
     }
     public RectTransform searchMenu;
-    public RectTransform searchMenuBar;
-    public RectTransform bottomNavBar;
     [Range(0, 1)]
     public float open_y_pos = 0;
     [Range(0, 1)]
@@ -38,7 +36,7 @@ public class SearchMenuController : MonoBehaviour
 
         desiredAnchoredPosition = new Vector2(searchMenu.anchoredPosition.x, yoffset);
         if (!Application.isPlaying){
-            searchMenu.anchoredPosition =desiredAnchoredPosition;
+            searchMenu.anchoredPosition = desiredAnchoredPosition;
         }
 
     }
