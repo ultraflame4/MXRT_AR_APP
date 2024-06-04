@@ -36,6 +36,14 @@ public class TabManager : MonoBehaviour
         tabs[0].SetActive(true);
     }
 
+    public void ReloadTabs()
+    {
+        foreach (var tab in tabs)
+        {
+            tab.SetActive(false);
+        }
+        current_tab.SetActive(true);
+    }
 
 
     void OnTabClicked(IconButton clickedButton)
