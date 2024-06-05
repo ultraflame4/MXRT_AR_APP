@@ -33,18 +33,10 @@ public class InterestPointManager : MonoBehaviour
         }
     }
 
-    public void UnfocusAllInterestPoints()
-    {
-        foreach (var point in interestPoints)
-        {
-            point.meshRenderer.material.color = Color.white;
-        }
-    }
+
 
     public void FocusInterestPoint(InterestPoint interestPoint)
     {
-        UnfocusAllInterestPoints();
-        interestPoint.meshRenderer.material.color = Color.red;
         current_focus = interestPoint;
     }
 
