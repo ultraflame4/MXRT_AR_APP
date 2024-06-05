@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SearchListItem : MonoBehaviour, IPointerClickHandler
+public class SearchListItem : MonoBehaviour
 {
 
     public EstablishmentData restaurantData = new();
@@ -11,7 +11,7 @@ public class SearchListItem : MonoBehaviour, IPointerClickHandler
         AppController.Instance.LocateOnMap(restaurantData);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OpenDetails()
     {
         AppController.Instance.OpenRestaurantDetails();
     }

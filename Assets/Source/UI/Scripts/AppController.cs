@@ -15,6 +15,7 @@ public class AppController : MonoBehaviour
     public LoginState authState { get; private set; } = LoginState.GUEST;
     public static AppController Instance => _instance;
 
+    public PopupMenuManager popupMenuManager;
     public RestaurantDetailsMenuController restaurantDetails;
     public MapMenuController mapMenuController;
     public TabManager tabManager;
@@ -22,7 +23,7 @@ public class AppController : MonoBehaviour
 
     private static AppController _instance;
     public bool isMapOpen => mapMenuController.gameObject.activeSelf;
-    
+    public bool hasPopupOpen => popupMenuManager.overlay.gameObject.activeSelf;
 
     private void Awake()
     {

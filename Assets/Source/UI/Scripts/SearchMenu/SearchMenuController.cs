@@ -49,8 +49,8 @@ public class SearchMenuController : MonoBehaviour, IPointerClickHandler
 
     private void Update()
     {
+        if (AppController.Instance.hasPopupOpen) return;
         searchMenu.anchoredPosition = Vector2.Lerp(searchMenu.anchoredPosition, desiredAnchoredPosition, Time.deltaTime * transitionSpeed);
-
         if (EventSystem.current.currentSelectedGameObject?.transform.IsChildOf(transform) == true)
         {
             Open();
@@ -106,5 +106,6 @@ public class SearchMenuController : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Open();
+        Debug.Log("Clicked on search menu");
     }
 }
