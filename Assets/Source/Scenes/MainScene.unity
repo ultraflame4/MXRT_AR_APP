@@ -263,7 +263,7 @@ MonoBehaviour:
   selectorRadius: 5
   focus_time_secs: 1
   interestPointSelectorUI: {fileID: 1653864555}
-  debug_drawSelectorBeam: 1
+  debug_drawSelectorBeam: 0
 --- !u!1 &42724787
 GameObject:
   m_ObjectHideFlags: 0
