@@ -1,5 +1,16 @@
-public class RestaurantData
+using System;
+
+[Serializable]
+public class EstablishmentData
 {
+
+    public enum EstablishmentType{
+        FOOD,
+        SHOPPING,
+        VIEW,
+        OTHER
+    }
+
     /// <summary>
     /// The name of the restaurant.
     /// </summary>
@@ -35,7 +46,9 @@ public class RestaurantData
     /// </summary>
     public string email;
 
-    public RestaurantData(){
+    public EstablishmentType type;
+
+    public EstablishmentData(){
         name = "Restaurant Name";
         description = "Restaurant Description. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, quos.";
         rating = 0.5f;
@@ -43,6 +56,7 @@ public class RestaurantData
         phone = "+1234567890";
         website = "restaurant.website.com";
         email = "restaurant@emai.com";
+        type = EstablishmentType.FOOD;
     }
 
 }
