@@ -11,6 +11,7 @@ public class AppController : MonoBehaviour
         GUEST,
         LOGGED_IN,
     }
+    [field: SerializeField]
     public LoginState authState { get; private set; } = LoginState.GUEST;
     public static AppController Instance => _instance;
 
@@ -34,6 +35,8 @@ public class AppController : MonoBehaviour
 
     private void Start() {
         tabManager.TabChanged += OnTabChangeRequested;
+
+        tabManager.ReloadTabs();
     }
 
     private void OnTabChangeRequested(TabManager.TabData tab, bool isSameTab)
@@ -63,12 +66,14 @@ public class AppController : MonoBehaviour
     public void OpenMap()
     {
         EventSystem.current.SetSelectedGameObject(mapMenuController.gameObject);
+        tabManager.current_tab.tabPanel.SetActive(false);
         mapMenuController.gameObject.SetActive(true);
     }
     
     public void CloseMap()
     {
         mapMenuController.gameObject.SetActive(false);
+        tabManager.current_tab.tabPanel.SetActive(true);
     }
     
     
