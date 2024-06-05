@@ -55,6 +55,10 @@ public class SearchMenuController : MonoBehaviour, IPointerClickHandler
         {
             Open();
         }
+        else
+        {
+            Unfocus();
+        }
 
     }
 
@@ -65,6 +69,7 @@ public class SearchMenuController : MonoBehaviour, IPointerClickHandler
     {
         if (searchMenuState == SearchMenuState.Open) return;
         searchMenuState = SearchMenuState.Open;
+        EventSystem.current.SetSelectedGameObject(searchMenu.gameObject);
         UpdatePosition();
     }
     public void HidePartial()
@@ -87,7 +92,14 @@ public class SearchMenuController : MonoBehaviour, IPointerClickHandler
     /// </summary>
     public void Unfocus()
     {
-        Close();
+        if (AppController.Instance.isMapOpen)
+        {
+            HidePartial();
+        }
+        else
+        {
+            Close();
+        }
     }
 
 

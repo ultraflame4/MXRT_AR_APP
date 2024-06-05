@@ -20,6 +20,7 @@ public class AppController : MonoBehaviour
     public SearchMenuController searchMenu;
 
     private static AppController _instance;
+    public bool isMapOpen => mapMenuController.gameObject.activeSelf;
     
 
     private void Awake()
@@ -37,8 +38,8 @@ public class AppController : MonoBehaviour
 
     private void OnTabChangeRequested(TabManager.TabData tab, bool isSameTab)
     {
-        searchMenu.Close();
         CloseMap();
+        searchMenu.Unfocus();
     }
 
     public void Login()
