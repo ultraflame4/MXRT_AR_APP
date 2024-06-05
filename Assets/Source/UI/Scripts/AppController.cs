@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 
@@ -52,7 +53,7 @@ public class AppController : MonoBehaviour
         restaurantDetails.Open();
     }
 
-    public void Locate()
+    public void LocateOnMap(RestaurantData restaurantData)
     {
         OpenMap();
         searchMenu.HidePartial();
@@ -60,6 +61,7 @@ public class AppController : MonoBehaviour
 
     public void OpenMap()
     {
+        EventSystem.current.SetSelectedGameObject(mapMenuController.gameObject);
         mapMenuController.gameObject.SetActive(true);
     }
     

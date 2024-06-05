@@ -1,7 +1,9 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class SearchMenuController : MonoBehaviour
+
+public class SearchMenuController : MonoBehaviour, IPointerClickHandler
 {
     public enum SearchMenuState
     {
@@ -20,6 +22,7 @@ public class SearchMenuController : MonoBehaviour
     public SearchMenuState searchMenuState { get; private set; } = SearchMenuState.Hidden;
     public float transitionSpeed = 10f;
     private Vector3 desiredAnchoredPosition;
+
     private void UpdatePosition()
     {
         float yoffset = 0;
@@ -48,7 +51,10 @@ public class SearchMenuController : MonoBehaviour
     {
         searchMenu.anchoredPosition = Vector2.Lerp(searchMenu.anchoredPosition, desiredAnchoredPosition, Time.deltaTime * transitionSpeed);
 
-
+        if (EventSystem.current.currentSelectedGameObject?.transform.IsChildOf(transform) == true)
+        {
+            Open();
+        }
 
     }
 
@@ -57,6 +63,7 @@ public class SearchMenuController : MonoBehaviour
 
     public void Open()
     {
+        if (searchMenuState == SearchMenuState.Open) return;
         searchMenuState = SearchMenuState.Open;
         UpdatePosition();
     }
@@ -81,5 +88,11 @@ public class SearchMenuController : MonoBehaviour
     public void Unfocus()
     {
         Close();
+    }
+
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Open();
     }
 }
