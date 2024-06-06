@@ -1,4 +1,6 @@
 using System;
+using TMPro;
+using Unity.Tutorials.Core.Editor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,6 +14,10 @@ public class SearchMenuController : MonoBehaviour
         Hidden
     }
     public RectTransform searchMenu;
+    public TMP_InputField queryInput;
+    public Transform searchResultsList;
+    public GameObject searchResultsItemPrefab;
+
     [Range(0, 1)]
     public float open_y_pos = 0;
     [Range(0, 1)]
@@ -22,6 +28,26 @@ public class SearchMenuController : MonoBehaviour
     public SearchMenuState searchMenuState { get; private set; } = SearchMenuState.Hidden;
     public float transitionSpeed = 10f;
     private Vector3 desiredAnchoredPosition;
+
+
+    private void Start()
+    {
+        queryInput.onValueChanged.AddListener((s) => PopulateItems());
+        PopulateItems();
+    }
+
+    void PopulateItems(){
+        for (int i = 0; i < searchResultsList.childCount; i++)
+        {
+            Destroy(searchResultsList.GetChild(i).gameObject);
+        }
+        foreach (var item in AppController.Instance.interestPointsDatabase.interestPoints)
+        {
+            if (!item.name.ToLower().Contains(queryInput.text.ToLower()) && queryInput.text.IsNotNullOrEmpty()) continue;
+            var searchItem = Instantiate(searchResultsItemPrefab, searchResultsList).GetComponent<SearchListItem>();
+            searchItem.data = item;
+        }
+    }
 
     private void UpdatePosition()
     {

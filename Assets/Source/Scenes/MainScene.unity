@@ -478,6 +478,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   searchMenu: {fileID: 78087274}
+  queryInput: {fileID: 167656218}
+  searchResultsList: {fileID: 476685506}
+  searchResultsItemPrefab: {fileID: 1982723050419341067, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+    type: 3}
   open_y_pos: 1
   partial_y_pos: 0.234
   hidden_y_pos: 0
@@ -1908,7 +1912,7 @@ PrefabInstance:
     - target: {fileID: 5248981821404075450, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
       propertyPath: m_text
-      value: Restaurant Name
+      value: Bar 2
       objectReference: {fileID: 0}
     - target: {fileID: 5320500416746650819, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
@@ -3333,7 +3337,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -3343,7 +3347,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -3393,12 +3397,12 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 117.714294
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -4975,6 +4979,7 @@ MonoBehaviour:
   mapMenuController: {fileID: 497423001}
   tabManager: {fileID: 201872561}
   searchMenu: {fileID: 78087278}
+  interestPointsDatabase: {fileID: 851810639}
 --- !u!1 &645004706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5179,6 +5184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShoppingMall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248981821404075450, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
+      propertyPath: m_text
+      value: Mall A
       objectReference: {fileID: 0}
     - target: {fileID: 5320500416746650819, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
@@ -6845,7 +6855,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -6855,7 +6865,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -6905,12 +6915,12 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 190.85715
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -7136,7 +7146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3d8ef0e8d1d9846b123d5afeb4a788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  establishments:
+  interestPoints:
   - name: Mall B
     description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
       adipisicing elit. Quisquam, quos.
@@ -7197,6 +7207,7 @@ MonoBehaviour:
     email: restaurant@emai.com
     type: 2
     saved: 0
+  restaurants: []
   autoFindFromInterestPoints: 1
 --- !u!4 &851810640
 Transform:
@@ -10814,7 +10825,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -10824,7 +10835,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -10874,12 +10885,12 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 264
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -12713,6 +12724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: river
       objectReference: {fileID: 0}
+    - target: {fileID: 5248981821404075450, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
+      propertyPath: m_text
+      value: Singapore River
+      objectReference: {fileID: 0}
     - target: {fileID: 5320500416746650819, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -13193,6 +13209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShoppingMall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5248981821404075450, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
+      propertyPath: m_text
+      value: Mall B
+      objectReference: {fileID: 0}
     - target: {fileID: 5320500416746650819, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -13390,6 +13411,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: apple
       objectReference: {fileID: 0}
+    - target: {fileID: 5248981821404075450, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
+      propertyPath: m_text
+      value: Apple
+      objectReference: {fileID: 0}
     - target: {fileID: 5320500416746650819, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -13578,7 +13604,7 @@ PrefabInstance:
     - target: {fileID: 5248981821404075450, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
       propertyPath: m_text
-      value: Restaurant Name
+      value: Bar 1
       objectReference: {fileID: 0}
     - target: {fileID: 5320500416746650819, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
@@ -13859,7 +13885,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -13869,7 +13895,7 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
@@ -13919,12 +13945,12 @@ PrefabInstance:
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 44.57143
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2952851517284341393, guid: fd0dee0b689b5f14d9e04a0a2322ef0d,
         type: 3}

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class InterestPointsDatabase : MonoBehaviour {
     public InterestPointData[] interestPoints;
+    public InterestPointData[] restaurants;
     public bool autoFindFromInterestPoints = true;
 
     private void Awake() {
