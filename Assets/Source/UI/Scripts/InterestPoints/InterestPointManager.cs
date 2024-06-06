@@ -62,7 +62,7 @@ public class InterestPointManager : MonoBehaviour
 
         if (interesttype == InterestPointData.InterestPointType.FOOD)
         {
-            var option = CreateOption(InterestPointOption.OptionType.Details, "Reserve");
+            var option = CreateOption(InterestPointOption.OptionType.Details, "Details");
             option.establishmentData = interestPoint.establishment;
         }
 

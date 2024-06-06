@@ -22,6 +22,7 @@ public class SearchListItem : MonoBehaviour
 
     public void OpenDetails()
     {
+        AppController.Instance.restaurantDetails.currentRestaurant = data;
         AppController.Instance.OpenRestaurantDetails();
     }
 }

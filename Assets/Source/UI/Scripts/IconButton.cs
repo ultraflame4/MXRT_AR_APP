@@ -78,8 +78,8 @@ public class IconButton : ClickBounce, IPointerClickHandler
 
     public override void OnPointerClick(PointerEventData eventData)
     {
+        if (!override_click_behavior) SetActive(!active);
+        
         Clicked?.Invoke(this);
-        if (override_click_behavior) return;
-        SetActive(!active);
     }
 }
