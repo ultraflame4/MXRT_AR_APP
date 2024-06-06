@@ -16,7 +16,7 @@ public class MapMenuController : MonoBehaviour
 
     private void OnARClick(IconButton button)
     {
-        twoDMap.SetActive(button.active);
+        twoDMap.SetActive(!button.active);
     }
 
     private void OnEnable()
