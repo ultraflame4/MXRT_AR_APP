@@ -77,5 +77,9 @@ public class AppController : MonoBehaviour
         tabManager.current_tab.tabPanel.SetActive(true);
     }
     
+    public void NewQuery()
+    {
+        popupMenuManager.ShowMenu(popupMenuManager.menus[0]);
+    }
     
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class SearchMenuController : MonoBehaviour, IPointerClickHandler
+public class SearchMenuController : MonoBehaviour
 {
     public enum SearchMenuState
     {
@@ -110,9 +110,4 @@ public class SearchMenuController : MonoBehaviour, IPointerClickHandler
     }
 
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Open();
-        Debug.Log("Clicked on search menu");
-    }
 }

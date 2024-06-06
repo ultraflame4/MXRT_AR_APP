@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ public class InterestPointManager : MonoBehaviour
     [Tooltip("How long the player must focus on an interest point before it is selected")]
     public float focus_time_secs = 1f;
     public InterestPointSelector interestPointSelectorUI;
+    public GameObject interestPointOptionPrefab;
+    public Transform interestPointOptionsCtn;
     public bool debug_drawSelectorBeam = false;
     /// <summary>
     /// Counter for how long the player has been focusing on the current interest point
@@ -33,11 +36,43 @@ public class InterestPointManager : MonoBehaviour
         }
     }
 
+    private InterestPointOption CreateOption(InterestPointOption.OptionType type, string text)
+    {
+        var option = Instantiate(interestPointOptionPrefab, interestPointOptionsCtn).GetComponent<InterestPointOption>();
+        option.optionType = type;
+        option.SetText(text);
+        return option;
+    }
 
+    public void PopulateInterestPointOptions(InterestPoint interestPoint)
+    {
+
+        for (int i = 0; i < interestPointOptionsCtn.childCount; i++)
+        {
+            Destroy(interestPointOptionsCtn.GetChild(i).gameObject);
+        }
+        var interesttype = interestPoint.establishment.type;
+
+
+        if (!String.IsNullOrEmpty(interestPoint.establishment.website))
+        {
+            var option = CreateOption(InterestPointOption.OptionType.Link, "Visit Website");
+            option.link_url = interestPoint.establishment.website;
+        }
+
+        if (interesttype == EstablishmentData.EstablishmentType.FOOD)
+        {
+            var option = CreateOption(InterestPointOption.OptionType.Details, "Reserve");
+            option.establishmentData = interestPoint.establishment;
+        }
+
+    }
 
     public void FocusInterestPoint(InterestPoint interestPoint)
     {
         current_focus = interestPoint;
+        focus_candidate = null;
+        PopulateInterestPointOptions(current_focus);
     }
 
 
@@ -87,12 +122,14 @@ public class InterestPointManager : MonoBehaviour
 
         if (focus_candidate != null)
         {
+            interestPointOptionsCtn.gameObject.SetActive(false);
             interestPointSelectorUI.gameObject.SetActive(true);
             interestPointSelectorUI.UpdateData(focus_candidate.transform.position, focus_time_percent);
             return;
         }
         else if (current_focus != null)
         {
+            interestPointOptionsCtn.gameObject.SetActive(true);
             interestPointSelectorUI.gameObject.SetActive(true);
             interestPointSelectorUI.UpdateData(current_focus.transform.position, 1);
             return;
@@ -100,6 +137,7 @@ public class InterestPointManager : MonoBehaviour
         else
         {
             interestPointSelectorUI.gameObject.SetActive(false);
+            interestPointOptionsCtn.gameObject.SetActive(false);
         }
     }
 

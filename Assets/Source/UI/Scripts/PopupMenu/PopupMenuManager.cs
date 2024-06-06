@@ -44,7 +44,9 @@ public class PopupMenuManager : MonoBehaviour
         DisableAllMenu();
         container.SetActive(false);
         overlay.gameObject.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(AppController.Instance.searchMenu.gameObject);
+        if (AppController.Instance.searchMenu.searchMenuState == SearchMenuController.SearchMenuState.Open){
+            EventSystem.current.SetSelectedGameObject(AppController.Instance.searchMenu.gameObject);
+        }
     }
 
     internal void Close(PopupMenuController popupMenuController)
