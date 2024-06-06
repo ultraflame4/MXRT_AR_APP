@@ -49,9 +49,16 @@ public class SearchMenuController : MonoBehaviour, IPointerClickHandler
 
     private void Update()
     {
-        if (AppController.Instance.hasPopupOpen) return;
         searchMenu.anchoredPosition = Vector2.Lerp(searchMenu.anchoredPosition, desiredAnchoredPosition, Time.deltaTime * transitionSpeed);
-        if (EventSystem.current.currentSelectedGameObject?.transform.IsChildOf(transform) == true)
+        var current = EventSystem.current.currentSelectedGameObject?.transform;
+
+        // Skip if a popup is open
+        if (AppController.Instance.hasPopupOpen) return;
+        // Skip if the current selected object is a child of popup menu container
+        if (current?.transform.IsChildOf(AppController.Instance.popupMenuManager.transform)==true) return;
+        
+
+        if (current?.IsChildOf(transform) == true)
         {
             Open();
         }
