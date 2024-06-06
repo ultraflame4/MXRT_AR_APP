@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class SearchMenuController : MonoBehaviour
+public class SearchMenuController : MonoBehaviour, IPointerClickHandler
 {
     public enum SearchMenuState
     {
@@ -134,5 +134,8 @@ public class SearchMenuController : MonoBehaviour
         }
     }
 
-
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Open();
+    }
 }
