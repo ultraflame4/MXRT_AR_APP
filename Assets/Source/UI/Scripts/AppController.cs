@@ -58,7 +58,7 @@ public class AppController : MonoBehaviour
         restaurantDetails.Open();
     }
 
-    public void LocateOnMap(EstablishmentData restaurantData)
+    public void LocateOnMap(InterestPointData restaurantData)
     {
         OpenMap();
         searchMenu.HidePartial();

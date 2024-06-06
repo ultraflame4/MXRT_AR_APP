@@ -16,7 +16,7 @@ public class InterestPointOption : MonoBehaviour
 
     public TextMeshProUGUI text;
     public OptionType optionType;
-    public EstablishmentData establishmentData;
+    public InterestPointData establishmentData;
 
     public void OnClick()
     {

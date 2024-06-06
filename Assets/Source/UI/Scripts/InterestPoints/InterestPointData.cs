@@ -1,13 +1,14 @@
 using System;
 
 [Serializable]
-public class EstablishmentData
+public class InterestPointData
 {
 
-    public enum EstablishmentType{
+    public enum InterestPointType{
         FOOD,
         SHOPPING,
         VIEW,
+        CONTROL,
         OTHER
     }
 
@@ -46,9 +47,11 @@ public class EstablishmentData
     /// </summary>
     public string email;
 
-    public EstablishmentType type;
+    public InterestPointType type;
 
-    public EstablishmentData(){
+    public bool saved = false;
+
+    public InterestPointData(){
         name = "Restaurant Name";
         description = "Restaurant Description. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, quos.";
         rating = 0.5f;
@@ -56,7 +59,7 @@ public class EstablishmentData
         phone = "+1234567890";
         website = "restaurant.website.com";
         email = "restaurant@emai.com";
-        type = EstablishmentType.FOOD;
+        type = InterestPointType.FOOD;
     }
 
 }

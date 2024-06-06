@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static EstablishmentData;
+using static InterestPointData;
 
 public class InterestPoint : MonoBehaviour {
     
@@ -9,7 +9,7 @@ public class InterestPoint : MonoBehaviour {
     public Image iconImage;
     public TextMeshProUGUI title;
     public TextMeshProUGUI rating;
-    public EstablishmentData establishment;
+    public InterestPointData establishment;
     private Material mat;
 
 
@@ -34,13 +34,13 @@ public class InterestPoint : MonoBehaviour {
         rating.text = Mathf.Round(establishment.rating * 5).ToString();
         switch (establishment.type)
         {
-            case EstablishmentType.FOOD:
+            case InterestPointType.FOOD:
                 iconImage.sprite = icon_FOOD;
                 break;
-            case EstablishmentType.SHOPPING:
+            case InterestPointType.SHOPPING:
                 iconImage.sprite = icon_SHOPPING;
                 break;
-            case EstablishmentType.VIEW:
+            case InterestPointType.VIEW:
                 iconImage.sprite = icon_VIEW;
                 break;
             default:

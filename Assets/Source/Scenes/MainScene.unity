@@ -2035,6 +2035,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -13.74
       objectReference: {fileID: 0}
+    - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
+      propertyPath: establishment.name
+      value: Bar 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5302,6 +5307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
+      propertyPath: establishment.name
+      value: Mall A
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
       propertyPath: establishment.type
       value: 1
       objectReference: {fileID: 0}
@@ -7097,6 +7107,112 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845843875}
   m_CullTransparentMesh: 1
+--- !u!1 &851810638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851810640}
+  - component: {fileID: 851810639}
+  m_Layer: 0
+  m_Name: Database
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &851810639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851810638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3d8ef0e8d1d9846b123d5afeb4a788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  establishments:
+  - name: Mall B
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 1
+    saved: 0
+  - name: Bar 2
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 0
+    saved: 0
+  - name: Apple
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 1
+    saved: 0
+  - name: Bar 1
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 0
+    saved: 0
+  - name: Mall A
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 1
+    saved: 0
+  - name: Singapore River
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 2
+    saved: 0
+  autoFindFromInterestPoints: 1
+--- !u!4 &851810640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851810638}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 707.1044, y: 1232.595, z: 23.869461}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855097643
 GameObject:
   m_ObjectHideFlags: 0
@@ -12503,6 +12619,7 @@ MonoBehaviour:
     website: restaurant.website.com
     email: restaurant@emai.com
     type: 0
+    saved: 0
 --- !u!1 &1999039615
 GameObject:
   m_ObjectHideFlags: 0
@@ -12720,6 +12837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -13.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
+      propertyPath: establishment.name
+      value: Singapore River
       objectReference: {fileID: 0}
     - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
@@ -13198,6 +13320,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
+      propertyPath: establishment.name
+      value: Mall B
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
       propertyPath: establishment.type
       value: 1
       objectReference: {fileID: 0}
@@ -13390,6 +13517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
         type: 3}
+      propertyPath: establishment.name
+      value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
       propertyPath: establishment.type
       value: 1
       objectReference: {fileID: 0}
@@ -13572,6 +13704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -13.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886825957914671188, guid: 9afda127e4a9e4a4aa24823f8c1d7996,
+        type: 3}
+      propertyPath: establishment.name
+      value: Bar 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13864,3 +14001,4 @@ SceneRoots:
   - {fileID: 781934198}
   - {fileID: 600036257}
   - {fileID: 1701363597}
+  - {fileID: 851810640}

@@ -60,7 +60,7 @@ public class InterestPointManager : MonoBehaviour
             option.link_url = interestPoint.establishment.website;
         }
 
-        if (interesttype == EstablishmentData.EstablishmentType.FOOD)
+        if (interesttype == InterestPointData.InterestPointType.FOOD)
         {
             var option = CreateOption(InterestPointOption.OptionType.Details, "Reserve");
             option.establishmentData = interestPoint.establishment;

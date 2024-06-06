@@ -3,7 +3,7 @@ using UnityEngine;
 public class RestaurantDetailsMenuController : MonoBehaviour
 {
     public PopupMenuController popupMenuController;
-    public EstablishmentData currentRestaurant;
+    public InterestPointData currentRestaurant;
     public void Open()
     {
         popupMenuController.Show();

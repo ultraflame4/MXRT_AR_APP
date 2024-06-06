@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class SearchListItem : MonoBehaviour
 {
 
-    public EstablishmentData restaurantData = new();
+    public InterestPointData restaurantData = new();
 
     public void LocateEstablishment()
     {
