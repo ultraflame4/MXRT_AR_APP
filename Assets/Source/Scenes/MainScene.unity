@@ -6067,10 +6067,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 476685506}
     m_Modifications:
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.331421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.886002
+      objectReference: {fileID: 0}
     - target: {fileID: 1982723050419341067, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
       propertyPath: m_Name
       value: SearchListItem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285406290720487551, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.803528
       objectReference: {fileID: 0}
     - target: {fileID: 5085380638223076408, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
@@ -6286,10 +6301,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 476685506}
     m_Modifications:
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.331421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.886002
+      objectReference: {fileID: 0}
     - target: {fileID: 1982723050419341067, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
       propertyPath: m_Name
       value: SearchListItem (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285406290720487551, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.803528
       objectReference: {fileID: 0}
     - target: {fileID: 5085380638223076408, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
@@ -10549,27 +10579,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interestPoints:
-  - name: Singapore River
-    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
-      adipisicing elit. Quisquam, quos.
-    rating: 0.5
-    address: Dwad Street, 1234, City, Country
-    phone: +1234567890
-    website: restaurant.website.com
-    email: restaurant@emai.com
-    type: 2
-    saved: 0
-  - name: Apple
-    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
-      adipisicing elit. Quisquam, quos.
-    rating: 0.5
-    address: Dwad Street, 1234, City, Country
-    phone: +1234567890
-    website: restaurant.website.com
-    email: restaurant@emai.com
-    type: 1
-    saved: 0
   - name: Bar 2
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 0
+    saved: 0
+  - name: Bar 1
     description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
       adipisicing elit. Quisquam, quos.
     rating: 0.5
@@ -10589,6 +10609,16 @@ MonoBehaviour:
     email: restaurant@emai.com
     type: 1
     saved: 0
+  - name: Singapore River
+    description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos.
+    rating: 0.5
+    address: Dwad Street, 1234, City, Country
+    phone: +1234567890
+    website: restaurant.website.com
+    email: restaurant@emai.com
+    type: 2
+    saved: 0
   - name: Mall B
     description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
       adipisicing elit. Quisquam, quos.
@@ -10599,7 +10629,7 @@ MonoBehaviour:
     email: restaurant@emai.com
     type: 1
     saved: 0
-  - name: Bar 1
+  - name: Apple
     description: Restaurant Description. Lorem ipsum, dolor sit amet consectetur
       adipisicing elit. Quisquam, quos.
     rating: 0.5
@@ -10607,7 +10637,7 @@ MonoBehaviour:
     phone: +1234567890
     website: restaurant.website.com
     email: restaurant@emai.com
-    type: 0
+    type: 1
     saved: 0
   restaurants: []
   autoFindFromInterestPoints: 1
@@ -11377,10 +11407,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 476685506}
     m_Modifications:
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.331421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.886002
+      objectReference: {fileID: 0}
     - target: {fileID: 1982723050419341067, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
       propertyPath: m_Name
       value: SearchListItem (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285406290720487551, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.803528
       objectReference: {fileID: 0}
     - target: {fileID: 5085380638223076408, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
@@ -11635,10 +11680,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 476685506}
     m_Modifications:
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.331421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.886002
+      objectReference: {fileID: 0}
     - target: {fileID: 1982723050419341067, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
       propertyPath: m_Name
       value: SearchListItem (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285406290720487551, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.803528
       objectReference: {fileID: 0}
     - target: {fileID: 5085380638223076408, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
@@ -12745,7 +12805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30.1, y: -41.5}
+  m_AnchoredPosition: {x: -30.099976, y: -41.5}
   m_SizeDelta: {x: 35.419006, y: 35.419006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107170508
@@ -13754,10 +13814,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 476685506}
     m_Modifications:
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.331421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.886002
+      objectReference: {fileID: 0}
     - target: {fileID: 1982723050419341067, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
       propertyPath: m_Name
       value: SearchListItem (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285406290720487551, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.803528
       objectReference: {fileID: 0}
     - target: {fileID: 5085380638223076408, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
@@ -20742,10 +20817,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 476685506}
     m_Modifications:
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.331421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483120866801852811, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.886002
+      objectReference: {fileID: 0}
     - target: {fileID: 1982723050419341067, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}
       propertyPath: m_Name
       value: SearchListItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285406290720487551, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19.803528
       objectReference: {fileID: 0}
     - target: {fileID: 5085380638223076408, guid: c63bea3d2def1c94fa8e96c6fd7ef0f2,
         type: 3}

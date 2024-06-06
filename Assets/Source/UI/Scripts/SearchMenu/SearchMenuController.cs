@@ -1,6 +1,5 @@
 using System;
 using TMPro;
-using Unity.Tutorials.Core.Editor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -43,7 +42,7 @@ public class SearchMenuController : MonoBehaviour
         }
         foreach (var item in AppController.Instance.interestPointsDatabase.interestPoints)
         {
-            if (!item.name.ToLower().Contains(queryInput.text.ToLower()) && queryInput.text.IsNotNullOrEmpty()) continue;
+            if (!item.name.ToLower().Contains(queryInput.text.ToLower()) && !String.IsNullOrEmpty(queryInput.text)) continue;
             var searchItem = Instantiate(searchResultsItemPrefab, searchResultsList).GetComponent<SearchListItem>();
             searchItem.data = item;
         }
