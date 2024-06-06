@@ -21,6 +21,7 @@ public class AppController : MonoBehaviour
     public TabManager tabManager;
     public SearchMenuController searchMenu;
     public InterestPointsDatabase interestPointsDatabase;
+    public QueriesDatabase queriesDatabase;
 
     private static AppController _instance;
     public bool isMapOpen => mapMenuController.gameObject.activeSelf;
