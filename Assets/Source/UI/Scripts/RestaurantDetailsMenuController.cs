@@ -13,6 +13,21 @@ public class RestaurantDetailsMenuController : MonoBehaviour
         popupMenuController.Close();
     }
 
+    public void OpenYelp()
+    {
+        Application.OpenURL($"https://www.yelp.com/search?find_desc={currentRestaurant.name}");
+    }
+
+    public void OpenGoogle()
+    {
+        Application.OpenURL($"https://www.google.com/search?q={currentRestaurant.name}");
+    }
+
+    public void OpenWebsite()
+    {
+        Application.OpenURL(currentRestaurant.website);
+    }
+
 
     public void Locate()
     {
