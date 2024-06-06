@@ -7,6 +7,8 @@ public class InterestPointManager : MonoBehaviour
     public InterestPoint[] interestPoints;
     public bool autoFindInterestPoints = true;
 
+    
+    public AudioSource audioSource;
     public float selectorRadius = 2f;
     [Tooltip("How long the player must focus on an interest point before it is selected")]
     public float focus_time_secs = 1f;
@@ -90,6 +92,8 @@ public class InterestPointManager : MonoBehaviour
     {
         current_focus = interestPoint;
         focus_candidate = null;
+        audioSource.Play();
+        Handheld.Vibrate();
         PopulateInterestPointOptions(current_focus);
     }
 
