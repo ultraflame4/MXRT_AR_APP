@@ -13,8 +13,8 @@ public class IconButton : ClickBounce, IPointerClickHandler
     public TextMeshProUGUI labelTxt;
 
     public Action<IconButton> Clicked;
-    [SerializeField]
-    private bool active = false;
+    [field: SerializeField]
+    public bool active {get; private set;}= false;
     public bool debug_update = false;
     public bool disabled = false;
 
