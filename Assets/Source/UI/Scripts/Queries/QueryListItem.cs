@@ -14,9 +14,13 @@ public class QueryListItem : MonoBehaviour {
             return;
         }
         title.text = data.name;
-        latestUpdate.text = data.desc;
+        latestUpdate.text = "Hello, this is an example response from the staff.\n- Example Staff";
         type.text = data.type;
     }
 
+    public void Open(){
+        AppController.Instance.queriesDetails.currentQuery = data;
+        AppController.Instance.queriesDetails.Open();
+    }
     
 }

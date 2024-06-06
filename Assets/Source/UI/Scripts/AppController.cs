@@ -17,6 +17,7 @@ public class AppController : MonoBehaviour
 
     public PopupMenuManager popupMenuManager;
     public RestaurantDetailsMenuController restaurantDetails;
+    public QueriesDetails queriesDetails;
     public MapMenuController mapMenuController;
     public TabManager tabManager;
     public SearchMenuController searchMenu;
