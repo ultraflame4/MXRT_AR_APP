@@ -10,7 +10,7 @@ public class QueryListItem : MonoBehaviour {
     private void Start() {
         if (data == null)
         {
-            Debug.LogError("QueryListItem has no data!");
+            Debug.LogWarning("QueryListItem has no data!");
             return;
         }
         title.text = data.name;
