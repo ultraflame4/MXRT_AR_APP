@@ -28,7 +28,6 @@ public class SavedListController : MonoBehaviour
 
     private void OnTabChanged(TabManager.TabData data, bool isSameTab)
     {
-
         Populate();
     }
 

@@ -15,6 +15,6 @@ public class NewQueryMenu : MonoBehaviour {
         popupMenuController.Close();
         
         var db = AppController.Instance.queriesDatabase;
-        db.queries.Add(new QueriesDatabase.Query(inputTitle.text, inputDesc.text, inputType.options[inputType.value].text));
+        db.AddQuery(new QueriesDatabase.Query(inputTitle.text, inputDesc.text, inputType.options[inputType.value].text));
     }
 }

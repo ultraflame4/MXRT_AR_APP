@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,11 @@ public class QueriesDatabase : MonoBehaviour {
         }
     }
 
-
+    public event Action QueryAdded;
     public List<Query> queries = new List<Query>();
+    public void AddQuery(Query query) {
+        queries.Add(query);
+        QueryAdded?.Invoke();
+    }
 
 }
