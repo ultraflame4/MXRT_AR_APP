@@ -36,6 +36,11 @@ public class InterestPointManager : MonoBehaviour
         }
     }
 
+    public void ClearFocus()
+    {
+        current_focus = null;
+        focus_candidate = null;
+    }
     private InterestPointOption CreateOption(InterestPointOption.OptionType type, string text)
     {
         var option = Instantiate(interestPointOptionPrefab, interestPointOptionsCtn).GetComponent<InterestPointOption>();
