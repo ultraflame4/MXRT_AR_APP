@@ -53,6 +53,19 @@ public class InterestPointManager : MonoBehaviour
         }
         var interesttype = interestPoint.establishment.type;
 
+        if (interesttype == InterestPointData.InterestPointType.CONTROL)
+        {
+            foreach (var x in interestPoint.establishment.controlOptions)
+            {
+                var option = CreateOption(InterestPointOption.OptionType.None, x);
+            }
+            foreach (var q in interestPoint.establishment.control_queries_type)
+            {
+                var option = CreateOption(InterestPointOption.OptionType.Query, q);
+                option.establishmentData = interestPoint.establishment;
+                option.query_type = q;
+            }
+        }
 
         if (!String.IsNullOrEmpty(interestPoint.establishment.website))
         {

@@ -5,10 +5,10 @@ public class NewQueryMenu : MonoBehaviour {
     public TMP_InputField inputTitle;
     public TMP_InputField inputDesc;
     public TMP_Dropdown inputType;
-    private PopupMenuController popupMenuController;
+    public PopupMenuController popupMenuController;
 
-    private void Start() {
-        popupMenuController = GetComponent<PopupMenuController>();
+    public void Show() {
+        popupMenuController.Show();
     }
 
     public void CreateQuery() {

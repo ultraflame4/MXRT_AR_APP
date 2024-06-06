@@ -49,6 +49,10 @@ public class InterestPointData
 
     public InterestPointType type;
 
+    public string[] controlOptions;
+    public string[] control_queries_type;
+    
+
     public bool saved = false;
 
     public InterestPointData(){

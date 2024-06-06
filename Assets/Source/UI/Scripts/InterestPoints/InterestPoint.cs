@@ -31,6 +31,7 @@ public class InterestPoint : MonoBehaviour {
     public void UpdateDisplay(){
         if (establishment == null) return;
         title.text = establishment.name;
+        if (establishment.type == InterestPointType.CONTROL) return;
         rating.text = Mathf.Round(establishment.rating * 5).ToString();
         switch (establishment.type)
         {

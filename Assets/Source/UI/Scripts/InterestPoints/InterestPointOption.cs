@@ -9,10 +9,12 @@ public class InterestPointOption : MonoBehaviour
         Link,
         Details,
         Query,
+        None,
 
     }
 
     public string link_url;
+    public string query_type;
 
     public TextMeshProUGUI text;
     public OptionType optionType;
@@ -26,11 +28,18 @@ public class InterestPointOption : MonoBehaviour
                 Application.OpenURL(link_url);
                 break;
             case OptionType.Query:
-                AppController.Instance.NewQuery();
+                var newQueryMenu = AppController.Instance.newQueryMenu;
+                newQueryMenu.inputTitle.text = $"{text.text} : {establishmentData.name}";
+                AppController.Instance.newQueryMenu.inputType.value = newQueryMenu.inputType.options.FindIndex(x => x.text == query_type);
+                AppController.Instance.newQueryMenu.Show();
+
                 break;
             case OptionType.Details:
                 AppController.Instance.restaurantDetails.currentRestaurant = establishmentData;
                 AppController.Instance.OpenRestaurantDetails();
+                break;
+
+            default:
                 break;
         }
     }

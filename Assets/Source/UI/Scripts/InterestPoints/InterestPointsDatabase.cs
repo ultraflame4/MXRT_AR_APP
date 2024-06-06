@@ -13,7 +13,7 @@ public class InterestPointsDatabase : MonoBehaviour {
 
     void AutoRetrieveFromInterestPoints() {
         if (!autoFindFromInterestPoints)  return;
-        interestPoints = FindObjectsOfType<InterestPoint>().Select(x => x.establishment).Where(x=>x.type != InterestPointData.InterestPointType.CONTROL).ToArray();
+        interestPoints = FindObjectsOfType<InterestPoint>(true).Select(x => x.establishment).Where(x=>x.type != InterestPointData.InterestPointType.CONTROL).ToArray();
     }
 
     private void OnValidate() {

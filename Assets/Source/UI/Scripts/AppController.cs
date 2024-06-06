@@ -23,6 +23,7 @@ public class AppController : MonoBehaviour
     public SearchMenuController searchMenu;
     public InterestPointsDatabase interestPointsDatabase;
     public QueriesDatabase queriesDatabase;
+    public NewQueryMenu newQueryMenu;
 
     private static AppController _instance;
     public bool isMapOpen => mapMenuController.gameObject.activeSelf;
@@ -79,10 +80,6 @@ public class AppController : MonoBehaviour
         mapMenuController.gameObject.SetActive(false);
         tabManager.current_tab.tabPanel.SetActive(true);
     }
-    
-    public void NewQuery()
-    {
-        popupMenuManager.ShowMenu(popupMenuManager.menus[0]);
-    }
+
     
 }
