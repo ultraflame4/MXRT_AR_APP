@@ -4,7 +4,6 @@ public class MapMenuController : MonoBehaviour
 {
     public IconButton btnAR;
     public GameObject mapMenuPanel;
-    public GameObject background;
     public GameObject twoDMap;
 
 
@@ -19,13 +18,4 @@ public class MapMenuController : MonoBehaviour
         twoDMap.SetActive(!button.active);
     }
 
-    private void OnEnable()
-    {
-        background.SetActive(false);
-    }
-
-    private void OnDisable()
-    {
-        background.SetActive(true);
-    }
 }
