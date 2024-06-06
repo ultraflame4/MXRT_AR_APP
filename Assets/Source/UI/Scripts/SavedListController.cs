@@ -23,6 +23,7 @@ public class SavedListController : MonoBehaviour
     private void Start()
     {
         AppController.Instance.tabManager.TabChanged += OnTabChanged;
+        Populate();
     }
 
     private void OnTabChanged(TabManager.TabData data, bool isSameTab)
